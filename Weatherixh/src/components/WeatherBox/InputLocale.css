@@ -1,0 +1,95 @@
+.inputLocale{
+    width: 80% !important;
+    height: fit-content;
+    background-color: var(--secondary);
+    color: var(--secondary-text);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px var(--sub-secondary),
+                -2px -2px 10px var(--sub-secondary);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+
+}
+
+
+
+.inputLocale label{
+    width: calc(100% - 10px) !important;
+    height: fit-content;
+    background-color: var(--primary-text);
+    padding: 0;
+    border-radius: 10px;
+    border: 2px solid var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+}
+.inputLocale label input{
+    width: calc(100% - 50px);
+    display: inline-block;
+    height: 100%;
+    background-color: rgba(240, 248, 255, 0);
+    outline: none;
+    border: none;
+    text-align: center;
+    font-size: larger;
+    color: var(--primary);
+    font-weight: 600;
+    padding: 10px;
+}
+.inputLocale label button{
+    width: 40px;
+    height: 100%;
+    background-color: var(--primary);
+    color: var(--primary-text);
+    border: 1px solid var(--primary);
+    border-radius: 0;
+}
+.inputLocale b{
+    font-weight: bolder;
+    font-size: larger;
+    padding: 10px 0;
+}
+.inputLocale button{
+    background-color: var(--primary);
+    color: var(--primary-text);
+    width: fit-content !important;
+    height: fit-content;
+}
+@media screen and (max-width: 600px) {
+    .inputLocale{
+        padding: 20px;
+    
+    }
+    
+.inputLocale label input{
+    width: calc(100% - 40px);
+    font-size: 10px;
+
+}
+.inputLocale label button{
+    width: 30px;
+    height: 100%;
+    padding: 10px;
+    font-size: 10px;
+}
+.inputLocale b{
+    font-weight: bolder;
+    font-size: 10px;
+    padding: 10px 0;
+}
+.inputLocale button{
+    background-color: var(--primary);
+    color: var(--primary-text);
+    width: fit-content !important;
+    height: fit-content;
+    font-size: 10px;
+}
+}

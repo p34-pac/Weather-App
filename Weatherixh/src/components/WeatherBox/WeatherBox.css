@@ -1,0 +1,203 @@
+.weatherBox{
+    width: 80;
+    height: fit-content;
+    background-color: var(--secondary);
+    color: var(--secondary-text);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px var(--sub-secondary),
+                -2px -2px 10px var(--sub-secondary);
+
+}
+.wbNav{
+    width: 100%;
+    height: fit-content;
+}
+
+.weatherBox h1{
+    width: calc(100% - 40px);
+    height: fit-content;
+    font-size: 30px;
+    text-align: left;
+    margin: 10px 0;
+    padding-left: 40px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--sub-secondary);
+}
+
+.weatherBox div{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.weatherBox .wbNav button{
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    border: none;
+}
+.weatherBox .wbNav button svg path{
+    stroke: var(--secondary-text);
+}
+
+.weatherBox .content{
+    width: 100%;
+    height: fit-content;
+    max-height: 55vh;
+    padding: 0 0 0 0;
+    display: flex;
+    flex-direction: column;
+    color: var(--sub-primary);
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+  
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .weatherBox .content::-webkit-scrollbar {
+    display: none;
+  }
+.content .ICN-look{
+    width: 150px;
+    height: 150px;
+    margin-top: 200px;
+}
+.content .ICN-look svg,
+.content .ICN-look img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.content .temperature{
+    font-size: 5dvw;
+}
+.content .cloud{
+    font-size: 3dvw;
+    font-weight: 500;
+}
+.content .condition{
+    font-size: 3dvw;
+    font-weight: 500;
+}
+.content .location{
+    font-size: 3dvw;
+    font-weight: 500;
+
+}
+.content .others{
+    width: 100%;
+    height: fit-content;
+    /* border: 2px solid var(--sub-secondary); */
+    margin: 0;
+    margin-top: 30px;
+
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+.others .detail{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--sub-secondary);
+    border-radius: 5px;
+
+}
+.others .detail:hover{
+    background-color: var(--sub-hov-secondary);
+    opacity: 90%;
+    cursor: pointer;
+    transition-duration: 1s;
+
+}
+
+.others .detail .icon{
+    width: 35px;
+    height: 35px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.others .detail .context{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.others .detail .context i{
+    font-style: normal;
+}
+.others .detail .context i.fig{
+    margin-bottom: -3px;
+    font-size: large;
+    margin-top: -3px;
+    font-weight: 800;
+}
+.temp_c::after{
+    content: "℃";
+}
+.temp_f::after{
+    content: "℉";
+}
+
+@media screen and (max-width: 900px) {
+    .content .others{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .weatherBox{
+        height: fit-content;
+        background-color: var(--secondary);
+        color: var(--secondary-text);
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px var(--sub-secondary),
+                    -2px -2px 10px var(--sub-secondary);
+    
+    }
+    .weatherBox .wbNav button{
+        width: fit-content;
+        height: fit-content;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0);
+        position: absolute;
+        top: 25px;
+        left: 15px;
+        border: none;
+        zoom: 70%;
+    }
+    .content .others{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .content .temperature{
+        font-size: 10dvw;
+    }
+    .weatherBox .content{
+        width: 100%;
+        height: fit-content;
+        max-height: 55vh;
+        padding: 50px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        color: var(--sub-primary);
+    }
+    .weatherBox h1{
+        font-size: 5dvw;
+       
+    }
+}
